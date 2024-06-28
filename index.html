@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WMAD Survey Form 2023</title>
+    <link rel="stylesheet" href="/Form/form.css">
+</head>
+<body>
+    <div class="container">
+        <form id="surveyForm" onsubmit="return validateForm()">
+            <div class="image">
+                <img src="../image/header.webp" alt="">
+            </div>
+            <div class="text">
+                <h1>WMAD Survey Form</h1>
+            </div>
+            <div class="head">
+                <h2>Personal Information</h2>
+            </div>
+            <fieldset>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName"/>
+                <span id="fullname-error" class="error-message"></span>
+
+                <label for="email">What is your Email:</label>
+                <input type="text" id="email" name="email"/>
+                <span id="email-error" class="error-message"></span>
+
+                <label for="gradeLevel">Current Grade Level:</label>
+                <select id="gradeLevel"  style="background-color: white; width: 100%;"  name="gradeLevel">
+                    <option value="">Select</option>
+                    <option value="Grade 9">Grade 9</option>
+                    <option value="Grade 10">Grade 10</option>
+                    <option value="Grade 11">Grade 11</option>
+                    <option value="Grade 12 (failed)">Grade 12 (failed)</option>
+                    <option value="Grade 12 (passed)">Grade 12 (passed)</option>
+                </select>
+                <span id="gradeLevel-error" class="error-message"></span>
+
+                <label>Type of School:</label>
+                <label><input type="radio" name="schoolType" value="FSD"> FSD</label>
+                <label><input type="radio" name="schoolType" value="Public School"> Public School</label>
+                <label><input type="radio" name="schoolType" value="Private School"> Private School</label>
+                <label><input type="radio" name="schoolType" value="Other"> Other (please specify):</label>
+                <input type="text" id="otherSchoolType" name="otherSchoolType">
+                <span id="schoolType-error" class="error-message"></span>
+            </fieldset>
+
+            <div class="head">
+                <h2>Section 1: Interest in Web Development</h2>
+            </div>
+            <fieldset>
+                <label>How interested are you in learning web development?</label>
+                <label><input type="radio" name="interestLevel" value="Very Interested"> Very Interested</label>
+                <label><input type="radio" name="interestLevel" value="Interested"> Interested</label>
+                <label><input type="radio" name="interestLevel" value="Neutral"> Neutral</label>
+                <label><input type="radio" name="interestLevel" value="Not Interested"> Not Interested</label>
+                <label><input type="radio" name="interestLevel" value="Not at all Interested"> Not at all Interested</label>
+                <span id="interestLevel-error" class="error-message"></span>
+                
+                <label>Have you had any previous experience with web development?</label>
+                <label><input type="radio" name="previousExperience" value="Yes"> Yes</label>
+                <label><input type="radio" name="previousExperience" value="No"> No</label>
+                <span id="previousExperience-error" class="error-message"></span>
+
+                <label for="experienceDescription">If yes, please describe your experience:</label>
+                <textarea id="experienceDescription" name="experienceDescription"></textarea>
+
+                <label>Which aspects of web development interest you the most? (Select all that apply)</label>
+                <label><input type="checkbox" name="webDevelopmentInterests" value="Front-end Development"> Front-end Development (HTML, CSS, JavaScript)</label>
+                <label><input type="checkbox" name="webDevelopmentInterests" value="Back-end Development"> Back-end Development (Server-side programming, databases)</label>
+                <label><input type="checkbox" name="webDevelopmentInterests" value="Full-stack Development"> Full-stack Development</label>
+                <label><input type="checkbox" name="webDevelopmentInterests" value="Mobile Application Development"> Mobile Application Development</label>
+                <label><input type="checkbox" name="webDevelopmentInterests" value="Web Design and User Experience (UX)"> Web Design and User Experience (UX)</label>
+                <label><input type="checkbox" name="webDevelopmentInterests" value="Other"> Other (please specify):</label>
+                <input type="text" id="otherWebDevelopmentInterests" name="otherWebDevelopmentInterests">
+                <span id="webDevelopmentInterests-error" class="error-message"></span>
+            </fieldset>
+
+            <div class="head">
+                <h2>Section 2: Familiarity with Active Pedagogy</h2>
+            </div>
+            <fieldset>
+                <label>Are you familiar with the concept of active pedagogy?</label>
+                <label><input type="radio" name="activePedagogy" value="Yes"> Yes</label>
+                <label><input type="radio" name="activePedagogy" value="No"> No</label>
+                <span id="activePedagogy-error" class="error-message"></span>
+
+                <label for="pedagogyDescription">If yes, how would you describe your understanding of active pedagogy?</label>
+                <textarea id="pedagogyDescription" name="pedagogyDescription"></textarea>
+                
+                <label>Have you ever participated in a learning activity that used active pedagogy?</label>
+                <label><input type="radio" name="activePedagogyExperience" value="Yes"> Yes</label>
+                <label><input type="radio" name="activePedagogyExperience" value="No"> No</label>
+                <span id="activePedagogyExperience-error" class="error-message"></span>
+
+                <label for="pedagogyActivityDescription">If yes, please describe the activity and your experience:</label>
+                <textarea id="pedagogyActivityDescription" name="pedagogyActivityDescription"></textarea>
+            </fieldset>
+
+            <div class="head">
+                <h2>Section 3: Learning Preferences and Environment</h2>
+            </div>
+            <fieldset>
+                <label>How do you prefer to learn new skills? (Select all that apply)</label>
+                <label><input type="checkbox" name="learningPreferences" value="Hands-on projects"> Hands-on projects</label>
+                <label><input type="checkbox" name="learningPreferences" value="Group work and collaboration"> Group work and collaboration</label>
+                <label><input type="checkbox" name="learningPreferences" value="Online tutorials and courses"> Online tutorials and courses</label>
+                <label><input type="checkbox" name="learningPreferences" value="Lectures and presentations"> Lectures and presentations</label>
+                <label><input type="checkbox" name="learningPreferences" value="Self-study"> Self-study</label>
+                <label><input type="checkbox" name="learningPreferences" value="Other"> Other (please specify):</label>
+                <input type="text" id="otherLearningPreferences" name="otherLearningPreferences">
+                <span id="learningPreferences-error" class="error-message"></span>
+
+                <label>What type of learning environment do you find most effective?</label>
+                <label><input type="radio" name="learningEnvironment" value="Classroom setting"> Classroom setting</label>
+                <label><input type="radio" name="learningEnvironment" value="Online learning"> Online learning</label>
+                <label><input type="radio" name="learningEnvironment" value="Blended learning"> Blended learning</label>
+                <label><input type="radio" name="learningEnvironment" value="Other"> Other (please specify):</label>
+                <input type="text" id="otherLearningEnvironment" name="otherLearningEnvironment">
+                <span id="learningEnvironment-error" class="error-message"></span>
+
+                <label>How important is peer interaction in your learning process?</label>
+                <label><input type="radio" name="peerInteraction" value="Very Important"> Very Important</label>
+                <label><input type="radio" name="peerInteraction" value="Important"> Important</label>
+                <label><input type="radio" name="peerInteraction" value="Neutral"> Neutral</label>
+                <label><input type="radio" name="peerInteraction" value="Not Important"> Not Important</label>
+                <label><input type="radio" name="peerInteraction" value="Not at all Important"> Not at all Important</label>
+                <span id="peerInteraction-error" class="error-message"></span>
+
+                <label>How do you feel about receiving feedback and support from instructors during your learning process?</label>
+                <label><input type="radio" name="instructorFeedback" value="Very Comfortable"> Very Comfortable</label>
+                <label><input type="radio" name="instructorFeedback" value="Comfortable"> Comfortable</label>
+                <label><input type="radio" name="instructorFeedback" value="Neutral"> Neutral</label>
+                <label><input type="radio" name="instructorFeedback" value="Uncomfortable"> Uncomfortable</label>
+                <label><input type="radio" name="instructorFeedback" value="Very Uncomfortable"> Very Uncomfortable</label>
+                <span id="instructorFeedback-error" class="error-message"></span>
+            </fieldset>
+
+            <div class="head">
+                <h2>Section 4: Expectations and Goals</h2>
+            </div>
+            <fieldset>
+                <label>What do you hope to achieve by learning web development? (Select all that apply)</label>
+                <label><input type="checkbox" name="goals" value="Gain basic knowledge and skills"> Gain basic knowledge and skills</label>
+                <label><input type="checkbox" name="goals" value="Develop advanced skills for career opportunities"> Develop advanced skills for career opportunities</label>
+                <label><input type="checkbox" name="goals" value="Build personal projects and portfolios"> Build personal projects and portfolios</label>
+                <label><input type="checkbox" name="goals" value="Prepare for further education in computer science"> Prepare for further education in computer science</label>
+                <label><input type="checkbox" name="goals" value="Other"> Other (please specify):</label>
+                <input type="text" id="otherGoals" name="otherGoals">
+                <span id="goals-error" class="error-message"></span>
+
+                <label for="careerImpact">How do you think web development skills will help you in your future career or studies?</label>
+                <textarea id="careerImpact" name="careerImpact"></textarea>
+                <span id="careerImpact-error" class="error-message"></span>
+                
+
+                <label for="specificTopics">Are there any specific topics or technologies you would like to learn in web development training?</label>
+                <textarea id="specificTopics" name="specificTopics"></textarea>
+                <span id="specificTopics-error" class="error-message"></span>
+            </fieldset>
+
+            <div class="head">
+                <h2>Section 5: Feedback and Suggestions</h2>
+            </div>
+            <fieldset>
+                <label for="trainingSuggestions">Do you have any suggestions for how the web development training could be improved to better suit your needs and interests?</label>
+                <textarea id="trainingSuggestions" name="trainingSuggestions"></textarea>
+                <span id="trainingSuggestions-error" class="error-message"></span>
+
+
+                <label for="additionalComments">Is there anything else you would like to share about your interest in web development or your learning preferences?</label>
+                <textarea id="additionalComments" name="additionalComments"></textarea>
+                <span id="additionalComments-error" class="error-message"></span>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="/Form/form.js"></script>
+</body>
+</html>

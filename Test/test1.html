@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .error-message {
+        color: red;
+      }
+      .error {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" />
+      <span id="fullname-error" class="error-message"></span>
+      <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <script>
+      function validateForm() {
+        var fullNameInput = document.getElementById("fullName");
+        var fullNameValue = fullNameInput.value.trim();
+        var fullNameError = document.getElementById("fullname-error");
+
+        if (fullNameValue === "") {
+          fullNameError.textContent = "Please enter your full name.";
+          fullNameInput.classList.add("error");
+        } else {
+          fullNameError.textContent = "";
+          fullNameInput.classList.remove("error");
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+    margin-left: 10%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #743793be;
+    color: #ffff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.total-result {
+    font-weight: bold;
+}
+</style>
+<body>
+    <table>
+        <tr>
+            <th>What is your current group?</th>
+            <th>Count of no</th>
+        </tr>
+        <tr>
+            <td>Grade 10</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>Grade 11</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>Grade 12</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Grade 12</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Grade 9</td>
+            <td>7</td>
+        </tr>
+        <tr class="total-result">
+            <td>Total Result</td>
+            <td>30</td>
+        </tr>
+    </table>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <label><input type="radio" name="favoriteFruit" value="Apple"> Apple</label><br>
+        <label><input type="radio" name="favoriteFruit" value="Banana"> Banana</label><br>
+        <label><input type="radio" name="favoriteFruit" value="Cherry"> Cherry</label><br>
+        <label><input type="radio" name="favoriteFruit" value="Date"> Date</label><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', (event) => {
+            const selectedFruit = document.querySelector('input[name="favoriteFruit"]:checked');
+
+       
+
+            console.log(selectedFruit.value);
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html> -->

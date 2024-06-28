@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <fieldset>
+            <legend>Choose Your Favorite Fruits</legend>
+            <label><input type="checkbox" name="favoriteFruits" value="Apple"> Apple</label><br>
+            <label><input type="checkbox" name="favoriteFruits" value="Banana"> Banana</label><br>
+            <label><input type="checkbox" name="favoriteFruits" value="Cherry"> Cherry</label><br>
+            <label><input type="checkbox" name="favoriteFruits" value="Date"> Date</label><br>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('myForm').addEventListener('submit', (event) => {
+                event.preventDefault(); 
+
+                const selectedFruits = Array.from(document.querySelectorAll('input[name="favoriteFruits"]:checked')).map(checkbox => checkbox.value);
+
+                console.log(selectedFruits); 
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <div>
+        <label>Fullname</label>
+        <input type="text" name="fullname" id="fullname" required />
+      </div>
+      <div>
+        <label>Female</label>
+        <input type="radio" name="gender" id="female" value="female" />
+        <label>Male</label>
+        <input type="radio" name="gender" id="male" value="male" />
+        <label>Unavailable</label>
+        <input type="radio" name="gender" id="unavailable" value="unavailable" />
+      </div>
+      <div>
+        <label>Apple</label>
+        <input type="checkbox" name="apple" id="apple" value="apple" />
+        <label>Banana</label>
+        <input type="checkbox" name="banana" id="banana" value="banana" />
+        <label>Orange</label>
+        <input type="checkbox" name="orange" id="orange" value="orange" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      document.getElementById("myForm").addEventListener("submit", submitForm);
+     
+     
+      function submitForm(event) {
+    event.preventDefault();
+
+    let fullname = document.getElementById("fullname").value;
+    let gender = document.querySelector('input[name="gender"]:checked').value;
+    let fruits = [];
+
+    let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            fruits.push(checkboxes[i].value);
+        }
+    }
+
+    console.log("Fullname: ", fullname);
+    console.log("Gender: ", gender);
+    console.log("Fruits: ", fruits);
+}
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <button onclick="myFunction()">Show me your money</button>
+  <p id="demo"></p>
+    <script>
+      
+      function myFunction(){
+        document.getElementById("demo").innerHTML="I have 1200$";
+      }
+          
+    </script>
+</body>
+</html>  -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Get Values from Select and Checkbox</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="mySelect">Choose an option:</label>
+        <select id="mySelect">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+
+        <br><br>
+
+        <label for="checkbox1">Checkbox 1</label>
+        <input type="checkbox" id="checkbox1" name="checkboxes" value="checkbox1">
+        
+        <label for="checkbox2">Checkbox 2</label>
+        <input type="checkbox" id="checkbox2" name="checkboxes" value="checkbox2">
+        
+        <label for="checkbox3">Checkbox 3</label>
+        <input type="checkbox" id="checkbox3" name="checkboxes" value="checkbox3">
+
+        <br><br>
+
+        <button type="button" onclick="getValues()">Submit</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+
+<!-- function getValues() {
+ 
+  let selectElement = document.getElementById("mySelect");
+  let selectedValue = selectElement.options[selectElement.selectedIndex].value;
+
+  // Get the values of checked checkboxes
+  let checkboxes = document.querySelectorAll('input[name="checkboxes"]:checked');
+  let checkedValues = [];
+  checkboxes.forEach((checkbox) => {
+      checkedValues.push(checkbox.value);
+  });
+
+
+  let result = `Selected option: ${selectedValue}<br>Checked values: ${checkedValues.join(", ")}`;
+  document.getElementById("result").innerHTML = result;
+} -->
+
+
+<!-- var learningPreferencesCheckboxes = document.querySelectorAll('input[name="learningPreferences"]:checked');
+for (var i = 0; i < learningPreferencesCheckboxes.length; i++) {
+    formData.learningPreferences.push(learningPreferencesCheckboxes[i].value);
+} -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simplified Form</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let form = document.getElementById("surveyForm");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                let formData = {
+                    fullName: document.getElementById("fullName").value,
+                    email: document.getElementById("email").value,
+                    selectedOption: document.getElementById("mySelect").value,
+                    learningPreferences: []
+                };
+
+           
+                var learningPreferencesCheckbox = document.querySelector('input[name="learningPreferences"]:checked');
+                if (learningPreferencesCheckbox) {
+                    formData.learningPreferences.push(learningPreferencesCheckbox.value);
+                }
+
+                console.log("Form Data:", formData);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h2>Simplified Form Example</h2>
+
+    <form id="surveyForm">
+     
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required><br><br>
+
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+      
+        <label>Learning Preference:</label><br>
+        <input type="checkbox" name="learningPreferences" value="Visual"> Visual<br><br>
+
+        <label for="mySelect">Choose an option:</label>
+        <select id="mySelect" name="mySelect">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select><br><br>
+
+   
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html> -->

@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f2f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; }
+
+.container {
+    background-color: #F6E7FD;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.big-all {
+    max-width: 900px; 
+    margin: 0 auto;
+    background-color: #fff; 
+    padding: 40px; 
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.all {
+    width: 100%;
+    max-width: 900px;
+    height: 800px;
+    background-color: #F6E7FD;
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+    border-radius: 12px;
+  
+}
+
+.header {
+    background-color: #743793be;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.header h1 {
+    color: white;
+    margin: 0;
+    font-size: 38px;
+}
+
+.content {
+    padding: 30px;
+    text-align: center;
+}
+.icon {
+    width: 90px;
+    height: 90px;
+    background-color: #743793be;
+    margin-left: 46%;
+    border-radius: 50px;
+}
+.icon i{
+    font-size: 55px;
+    margin-top: 17%;
+    color: white;
+}
+
+
+.content h2 {
+    color: black;
+    margin: 20px 0 30px;
+    margin-left: 4%;
+    font-size: 40px;
+}
+
+.content p {
+    color: #2d1919;
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+
+
+
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    color: #3333cc;
+    text-decoration: none;
+    font-size: 25px;
+   
+}
+
+.image {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px 12px 0 0;
+   
+    border-bottom: 3px solid black;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px 12px 0 0;
+ 
+}
+
+@media (max-width: 900px) {
+    .content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .content h2 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    .buttons button, .buttons a {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image{
+        height: 200px;
+    }
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .content h2 {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .all{
+        height: 800px;
+    }
+.icon {
+   font-size: 50PX;
+}
+
+}

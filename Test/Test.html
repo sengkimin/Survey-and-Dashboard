@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Test.css">
+</head>
+<body>
+  
+ 
+    <script>
+        const div1= document.createElement("div");
+        const h1= document.createElement("h1");
+        const div3= document.createElement("div");
+        const div4= document.createElement("div");
+        const div5= document.createElement("div");
+        div1.append(h1 ,div3);
+        div3.append(div4 , div5);
+         document.body.prepend(div1);
+        div1.setAttribute("class","container");
+        h1.textContent="WMAD Skill Tree";
+        div3.setAttribute("class","nav");
+        div4.setAttribute("class","logo");
+        div5.setAttribute("class","skill");
+
+        const img= document.createElement("img");
+        img.src="https://img.freepik.com/free-photo/vibrant-colors-nature-close-up-wet-purple-daisy-generated-by-artificial-intellingence_25030-63819.jpg"
+        div4.append(img);
+        img.setAttribute("class", "img")
+
+     
+        const img1= document.createElement("img");
+        img1.src="https://img.freepik.com/premium-photo/bunch-flowers-that-are-pink-blue_873925-30680.jpg"
+        div5.append(img1);
+        img1.setAttribute("class", "img")
+
+    
+
+      
+
+
+        
+
+
+    </script>
+</body>
+</html>

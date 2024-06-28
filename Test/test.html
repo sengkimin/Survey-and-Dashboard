@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <label>Enter some text: <input type="text" name="inputText"></label>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', (event) => {
+            event.preventDefault(); 
+
+            const inputText = document.querySelector('input[name="inputText"]').value;
+            console.log(inputText);
+        });
+    </script>
+</body>
+</html>
